@@ -40,7 +40,7 @@ pnpm build
 pnpm install
 
 # 建置並部署
-pnpm deploy
+pnpm gh-deploy
 ```
 
 這會自動建置專案並推送到 `gh-pages` 分支。
@@ -64,12 +64,32 @@ react-hello-world/
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
+├── tests/                          # 🧪 Playwright 測試檔案
+│   └── react-hello-world.spec.ts   # 測試腳本
+├── test-results/                   # 🧪 Playwright 測試結果
+│   └── .last-run.json             # 最後執行記錄
+├── playwright-report/              # 🧪 Playwright HTML 報告
+│   └── index.html                 # 測試報告頁面
+├── .playwright-mcp/               # 🧪 Playwright MCP 相關檔案
 ├── .eslintrc.cjs
+├── .gitignore
+├── .github                        # GitHub 相關設定
 ├── index.html
 ├── package.json
+├── playwright.config.ts           # 🧪 Playwright 設定檔
+├── pnpm-lock.yaml
 ├── vite.config.js
+├── EXECUTE_TEST.md                # 🧪 測試執行說明
 └── README.md
 ```
+
+### 🧪 Playwright 相關檔案說明
+- `playwright.config.ts`: Playwright 測試設定檔
+- `tests/`: 存放所有測試檔案的目錄
+- `test-results/`: 測試執行結果和快照
+- `playwright-report/`: HTML 格式的測試報告
+- `.playwright-mcp/`: Playwright MCP 工具相關檔案
+- `EXECUTE_TEST.md`: 測試執行的詳細說明文件
 
 ## 注意事項
 1. 專案需要安裝 @playwright/test
@@ -101,7 +121,7 @@ workers: process.env.CI ? 1 : undefined,
 pnpm add -D @types/node
 ```
 
-5. 查看 playwright 測試結果 (http://localhost:9323/)
+5. 查看 playwright 測試結果 (http://localhost:9323)
 ```
 npx playwright show-report
 ```
