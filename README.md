@@ -70,3 +70,40 @@ react-hello-world/
 ├── vite.config.js
 └── README.md
 ```
+
+## 注意事項
+1. 專案需要安裝 @playwright/test
+```
+pnpm add -D @playwright/test
+```
+
+2. 它會需要 playwright 瀏覽器
+```
+npx playwright install
+```
+
+3. 執行 playwright test
+```
+npx playwright test tests/xxx.spec.ts
+```
+
+4. 要看測試結果會生成 playwright.config.ts 檔案在根目錄，其中會有需要安裝 node 的 typescript 文件
+```
+/* Fail the build on CI if you accidentally left test.only in the source code. */
+forbidOnly: !!process.env.CI,
+/* Retry on CI only */
+retries: process.env.CI ? 2 : 0,
+/* Opt out of parallel tests on CI. */
+workers: process.env.CI ? 1 : undefined,
+```
+
+```
+pnpm add -D @types/node
+```
+
+## Prompt
+
+```
+"issue: turn the hello world to red"
+@.github Explore https://clayleee.github.io/react-hello-world/ to see if the issue is done
+```
