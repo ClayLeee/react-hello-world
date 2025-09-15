@@ -33,15 +33,7 @@ pnpm build
 
 ## 部署到 GitHub Pages
 
-### 方法一：自動部署（推薦）
-
-1. 將程式碼推送到 GitHub 儲存庫的 `main` 分支
-2. 前往 GitHub 儲存庫設定頁面
-3. 點選左側選單的 "Pages"
-4. 在 "Source" 部分選擇 "GitHub Actions"
-5. 推送程式碼後，GitHub Actions 會自動建置並部署
-
-### 方法二：手動部署
+### 使用 gh-pages 套件部署
 
 ```bash
 # 安裝依賴
@@ -51,40 +43,14 @@ pnpm install
 pnpm deploy
 ```
 
-## 部署步驟詳細說明
-
-### 1. 建立 GitHub 儲存庫
-
-1. 在 GitHub 建立新的儲存庫，名稱為 `react-hello-world`
-2. 將本地程式碼推送到儲存庫：
-
-```bash
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/你的用戶名/react-hello-world.git
-git push -u origin main
-```
-
-### 2. 啟用 GitHub Pages
-
-1. 前往 GitHub 儲存庫頁面
-2. 點選 "Settings" 選項卡
-3. 在左側選單中找到 "Pages"
-4. 在 "Source" 部分選擇 "GitHub Actions"
-
-### 3. 等待自動部署
-
-- 推送程式碼後，GitHub Actions 會自動觸發
-- 可以在 "Actions" 選項卡查看部署進度
-- 部署完成後，網站會在 `https://你的用戶名.github.io/react-hello-world` 可用
+這會自動建置專案並推送到 `gh-pages` 分支。
 
 ## 技術堆疊
 
 - React 18
 - Vite
 - ESLint
-- GitHub Actions
+- gh-pages (部署工具)
 - GitHub Pages
 
 ## 專案結構
@@ -98,9 +64,6 @@ react-hello-world/
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
-├── .github/
-│   └── workflows/
-│       └── deploy.yml
 ├── .eslintrc.cjs
 ├── index.html
 ├── package.json
