@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.hello-world {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007bff;
+  text-align: center;
+}
