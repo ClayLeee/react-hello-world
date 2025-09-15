@@ -101,3 +101,8 @@ workers: process.env.CI ? 1 : undefined,
 pnpm add -D @types/node
 ```
 
+## Prompt
+
+```
+@.github Explore @https://clayleee.github.io/react-hello-world/
+```
