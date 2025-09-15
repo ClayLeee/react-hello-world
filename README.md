@@ -101,6 +101,11 @@ workers: process.env.CI ? 1 : undefined,
 pnpm add -D @types/node
 ```
 
+5. 查看 playwright 測試結果 (http://localhost:9323/)
+```
+npx playwright show-report
+```
+
 ## Prompt
 
 ```
