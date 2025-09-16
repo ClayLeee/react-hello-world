@@ -71,6 +71,7 @@ react-hello-world/
 ├── playwright-report/              # Playwright 生成的測試報告
 │   └── index.html
 ├── test-results/                   # Playwright 生成的測試結果
+├── .prompt                         # Playwright Prompt
 ├── .eslintrc.cjs
 ├── index.html
 ├── package.json
@@ -117,5 +118,6 @@ npx playwright show-report
 ## Prompt
 
 ```
+"issue: create a project which has a blue hello world on it"
 @.github Explore @https://clayleee.github.io/react-hello-world/
 ```
