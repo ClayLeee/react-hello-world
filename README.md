@@ -73,7 +73,7 @@ react-hello-world/
 ├── .playwright-mcp/               # 🧪 Playwright MCP 相關檔案
 ├── .eslintrc.cjs
 ├── .gitignore
-├── .github                        # GitHub 相關設定
+├── .prompt                        # 🧪 Playwright Prompt
 ├── index.html
 ├── package.json
 ├── playwright.config.ts           # 🧪 Playwright 設定檔
